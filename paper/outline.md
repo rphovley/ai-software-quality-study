@@ -32,9 +32,10 @@ similarity.
 
 ## 5. Patterns and observations
 
-Held to section 4.5: a practice is a **pattern** only if it appears in all
-higher-quality projects and is absent or weaker in all lower-quality ones.
-Anything else is an **observation**. This section keeps the two labeled apart.
+Held to section 4.5: a practice is a **pattern** only if it appears in more than
+one higher-quality project and is absent or weaker in one or more lower-quality
+ones. A practice seen in a single project is an **observation**. This section
+keeps the two labeled apart.
 
 ## 6. Limitations
 

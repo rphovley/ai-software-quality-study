@@ -184,8 +184,9 @@ For each project report:
    thin code, and that thinness is reported rather than smoothed over.
 
 Per section 4.5, a difference in stated emphasis is reported as a pattern only
-if it holds across all higher-quality projects and is absent or weaker in all
-lower-quality ones. Otherwise it is an observation.
+if it appears in more than one higher-quality project and is absent or weaker in
+one or more lower-quality ones. A difference seen in a single project is an
+observation, not a pattern.
 
 ---
 

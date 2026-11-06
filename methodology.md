@@ -128,22 +128,22 @@ A practice is reported as a pattern only if it appears in more than 1 higher-qua
 - **Survivorship.** Only projects popular and successful enough to notice are studied.
 - **Bugs and releases are proxies.** They are imperfect measures of stability and of value delivered, a long-standing problem in measuring software quality.
 - **Product differences.** A terminal emulator, a Linux distribution, and a coding agent have very different failure surfaces. Omarchy in particular sits near the line between client software and infrastructure.
+- **Project / Company Age** Product maturity is also a significant factor in comparing "stability" and "quality" as newer projects will experience more turbulence and often that is by design.
 - **Breadth by design.** Broad products will score lower on cohesion; this is a known difficulty in measuring product direction, independent of AI.
-- **Popularity.** Low-severity bug counts likely scale with user base (mitigated by the severity 2–3 robustness check).
+- **Popularity.** Low-severity bug counts likely scale with user base.
 - **Reporting conventions.** Some projects route reports through discussions before issues are opened, which can undercount bugs relative to projects that accept issues directly.
 - **Researcher bias.** The researcher expected direction-focused projects to perform better. Mitigated by dating hypotheses and definitions before data collection.
 
 ## 7. Decision log
 
-| Date       | Decision                                                                                     |
-| ---------- | -------------------------------------------------------------------------------------------- |
-| 2026-11-04 | H1 and H2 written                                                                            |
-| 2026-11-05 | LOC recorded as a variable, not a denominator                                                |
-| 2026-11-05 | Feature entries taken from changelogs                                                        |
-| 2026-11-05 | Regressions reported as a separate metric                                                    |
-| 2026-11-05 | 14-day bug attribution window                                                                |
-| 2026-11-05 | No popularity normalization; popularity threshold plus severity 2–3 robustness check instead |
-| 2026-11-05 | Study window 2026-05-01 to 2026-10-31; issue snapshot on or after 2026-11-14                 |
+| Date       | Decision                                                                     |
+| ---------- | ---------------------------------------------------------------------------- |
+| 2026-11-04 | H1 and H2 written                                                            |
+| 2026-11-05 | LOC recorded as a variable, not a denominator                                |
+| 2026-11-05 | Feature entries taken from changelogs                                        |
+| 2026-11-05 | Regressions reported as a separate metric                                    |
+| 2026-11-05 | No popularity normalization                                                  |
+| 2026-11-05 | Study window 2026-05-01 to 2026-10-31; issue snapshot on or after 2026-11-14 |
 
 ## Amendments
 
