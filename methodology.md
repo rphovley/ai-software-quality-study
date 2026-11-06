@@ -1,6 +1,6 @@
 # Methodology
 
-This document is the study's preregistration. It is committed before any data is collected, so the git history shows that the question, hypotheses, selection rules, and measurement definitions came before the results. Any later change is recorded in the Amendments section at the bottom, with a date and a reason, rather than edited in place.
+Attempting to follow observational study practices by stating questions/hypothesis before collecting data to help reduce bias. Other steps here are for thoroughness, precision, repeatability, other good scinecy words, etc...
 
 ## 1. Research question
 
@@ -17,11 +17,13 @@ Quality means the number of confirmed bugs reported per unit of work shipped (de
 
 Both written 2026-11-04, before data collection.
 
-**H1.** AI-enabled projects that emphasize direction over pace will ship higher-quality software.
+**H1.** AI enabled companies that emphasize direction over pace will ship higher quality software.
 
-**H2.** AI-enabled projects with end-to-end (e2e) tests will ship higher-quality software.
+**H2.** AI enabled companies with e2e tests, will ship higher quality software.
 
-Rationale for H2: unit tests written by agents risk being circular, confirming that the code does what the code does. E2e tests are more likely to check the behavior the user actually wants. They are also slower and more expensive to run, which is friction in agentic workflows that run tests often, so whether a project accepts that cost is itself a signal.
+Thoughts on H1: A little bit of my thoughts here on why i chose these two elements. While isn't stating something about software that I believe was one of the more important factors in succesfull teams. I think this is still true. Many people online make claims about shipping code fast and how much that's changing everything. I do believe it is helpful but only in so far as your direction is correct. More code is more liability. More features can be more noise. Cohesion might matter more than ever now that producing code has become more frictionless.
+
+Thoughts on H2: unit tests written by agents risk being circular, confirming that the code does what the code does. I have found them useful so far but there is a theory floating around that e2e tests may be the only thing you need now. E2e tests are more likely to check the behavior the user actually wants. They are also slower and more expensive to run, which is friction in agentic workflows that run tests often, so whether a project accepts that cost is itself a signal. I'm less certain of clear outcomes from this but how companies are positioning tests and whether that is working is part of what I'd like to learn from this study.
 
 ### Hypothesis-to-measurement map
 
@@ -58,7 +60,7 @@ A candidate is included only if it meets every rule. Every candidate considered,
 
 ### 4.1 Pace
 
-- **Releases per week.** Prereleases (betas, RCs, nightlies with a version tag) count as releases if published within the study window. Each release is flagged as stable or prerelease so results can also be checked with stable releases only.
+- **Releases per week.** Will ahve to consider the release methods of each project to adequetly cover releases per week. May disqualify some candidates if we can't get release measurements.
 - **Release size.** Commits and lines added/removed between consecutive release tags. Lockfiles, generated files, and vendored code are excluded; exclusion patterns are listed per project in `config/projects.yaml`.
 - **Merged PRs per week.**
 - **Agent-attributed share.** Share of commits and merged PRs carrying agent attribution. Detection patterns are stored in the repo.
@@ -83,7 +85,7 @@ Features that integrate external systems (for example, adding support for anothe
 
 **Confirmed bugs:** issues labeled as bugs per the project's label mapping in `config/projects.yaml`, excluding duplicates and issues closed as "works as intended" or "not planned." Where labels are missing, issues are classified by an LLM with a fixed rubric and a hand-checked sample.
 
-**Attribution to a release:** a bug counts against the version it reports, or, when no version is given, the most recent release before it was filed, if it was filed within 14 days of that release.
+**Attribution to a release:** a bug counts against the version it reports, or, when no version is given, the most recent release before it was filed.
 
 **Severity weights** (rubric in `codebook/severity-rubric.md`):
 
@@ -99,7 +101,7 @@ Features that integrate external systems (for example, adding support for anothe
 - Reopened bug rate
 - Median time from bug report to fix
 
-**Popularity:** not normalized. The popularity threshold (rule 8) ensures bugs surface within the window. Because low-severity, long-tail bugs likely scale with user count, all bug metrics are also reported counting only severity 2–3 bugs as a robustness check.
+**Popularity:** not normalized. The popularity threshold (rule 8) ensures bugs surface within the window. Because low-severity, long-tail bugs likely scale with user count. Severe bugs will likely be found within 14 days by projects that fit our criteria.
 
 ### 4.4 Practices
 
@@ -109,7 +111,7 @@ Features that integrate external systems (for example, adding support for anothe
 
 ### 4.5 What counts as a pattern
 
-A practice is reported as a pattern only if it appears in all higher-quality projects and is absent or weaker in all lower-quality ones. A practice seen in a single project is reported as an observation, not a pattern.
+A practice is reported as a pattern only if it appears in more than 1 higher-quality projects and is absent or weaker in 1 or more lower-quality ones. A practice seen in a single project is reported as an observation, not a pattern.
 
 ## 5. Collection protocol
 
@@ -141,7 +143,6 @@ A practice is reported as a pattern only if it appears in all higher-quality pro
 | 2026-11-05 | Regressions reported as a separate metric                                                    |
 | 2026-11-05 | 14-day bug attribution window                                                                |
 | 2026-11-05 | No popularity normalization; popularity threshold plus severity 2–3 robustness check instead |
-| 2026-11-05 | Prereleases count as releases if within the window, flagged for a stable-only check          |
 | 2026-11-05 | Study window 2026-05-01 to 2026-10-31; issue snapshot on or after 2026-11-14                 |
 
 ## Amendments

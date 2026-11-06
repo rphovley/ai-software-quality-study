@@ -1,10 +1,12 @@
 # AI Software Quality Study
 
-An observational study of open-source, AI-enabled software projects, asking:
+Social media is so loud, I wanted to dig through the data and find some ground truth around how AI has been integrated well at companies. This observiational study is a stab at exposing parts of that.
+
+My primary question is:
 
 > **What practices distinguish high-quality AI-enabled software companies?**
 
-Quality is measured as confirmed bugs reported per unit of work shipped. The study compares projects that emphasize direction and deliberate pace against projects that emphasize speed of delivery.
+Quality is hard to measure but there are some things that will be directionally useful. Quality will be measured as confirmed bugs reported per unit of work shipped. A unit of work shipped will be considered both as a PR or a release. I'd like to compare outcomes for companies that are more interested in direction than pace, and in whether or not end-to-end test practices specifically appear to help.
 
 ## Hypotheses (dated 2026-11-04)
 
